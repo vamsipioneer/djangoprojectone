@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>{{ block.super }}</h3>
+<h1> www.vamsiapplication.com</h1>
+<h1> HELLO THIS IS NEW APPLICATION....</h1>
+<p> This is {{ html_var }} designing</p>
+  <p> This is <code>{{ html_var }}</code>designing</p>
+<p>
+{% if bool_item == True %}
+Random number is {{ num }}
+{% endif %}
+</p>
+<p>
+{% for item in some_list %}
+  {% if item|divisibleby:"2" %}
+      EVEN Number
+  {% endif %}
+  {{ item }} <br><br>
+{% endfor %}
+{% endblock content %}
